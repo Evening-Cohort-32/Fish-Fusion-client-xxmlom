@@ -1,4 +1,4 @@
-//inventory array
+//boat inventory array
 const freshCatch = [
     { id: 1, species: "Halibut", weight: 6, price: 3.55, amount: 30 },
     { id: 2, species: "Mackerel", weight: 3, price: 4.10, amount: 48 },
@@ -11,6 +11,7 @@ const freshCatch = [
 ]
 
 // create a function called boatInventory that returns the boatInventory
+
 const boatInventory = () => {
 return freshCatch
 }
