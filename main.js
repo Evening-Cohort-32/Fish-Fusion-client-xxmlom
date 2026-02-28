@@ -1,4 +1,4 @@
-const { fishMenu } = require("./restaurant.js")
+const {fishMenu} = require("./restaurant.js")
 
 /*
   Do not comment out this code. 

@@ -5,6 +5,7 @@
     "version": "0.2.0",
     "configurations": [
 
+
         
         {
             "type": "node",
@@ -23,6 +24,15 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}/fishingBoat.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Main",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/main.js"
         }
     ]
 }

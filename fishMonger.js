@@ -18,6 +18,7 @@ const { boatInventory } = require("./fishingBoat.js")
 
 const boatOfferings = boatInventory() 
 const mongerPurchases = []
+const chefPurchases = []
 
 const mongerInventory = () => {
 
@@ -28,10 +29,22 @@ const mongerInventory = () => {
                 boughtFish.amount = 10
              }  
              }
-
 }
 }
+mongerInventory ()
 
+const chefConstraints = (budget) => {
+    for (fish of mongerPurchases){
+        if(fish.price <= budget) {
+            chefPurchases.push(fish) 
+            for (boughtFish of chefPurchases) {
+                boughtFish.amount = fish.price * .5
+             }
+             fish.price -= fish.price * .5 
+        }
+    }
 
+  return chefPurchases  
+}
 
-module.exports = {mongerInventory}
+module.exports = {mongerInventory, chefConstraints}
