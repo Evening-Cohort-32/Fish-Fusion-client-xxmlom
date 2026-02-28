@@ -21,8 +21,10 @@ const fishMenu = (dailyBudget) => {
         '\t' +'<section class="menu__item">'+ fish.species + ' Soup</section>'+ '\n' +
         '\t' +'<section class="menu__item">'+ fish.species + ' Sandwich</section>'+ '\n' +
         '\t' +'<section class="menu__item">Grilled '+ fish.species + ' </section>'+ '\n' +
-        '</article>'+ '\n' ).join('') )
+        '\n' ).join('') )
 
+    html.push ('</article>')
+    
 const joinedHtml = html.join('');
 
 return joinedHtml
