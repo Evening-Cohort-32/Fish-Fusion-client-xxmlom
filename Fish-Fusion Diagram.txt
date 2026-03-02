@@ -1,0 +1,25 @@
+title Fish Fusion
+taneous message
+participant main.js
+participant fishingBoat.js
+participant fishMonger.js
+participant restaurant.js
+main.js<-restaurant.js
+note over fishingBoat.js:freshCatch is an array that holds the id, species, weight, price of each fish
+note over fishingBoat.js: boatInventory is a function that returns the boat inventory 
+fishingBoat.js->fishMonger.js:boatInventory sent to fishMonger
+note over fishMonger.js:boatOffferings calls the boatInventory to get a list of fish and creates an empty array
+note over fishMonger.js:mongerPurchases array will store what the monger decides to buy
+note over fishMonger.js: chefPurchases array will store what the chef purchases
+note over fishMonger.js: The mongerInventory function filters a list of available fish and prepares a purchase list based on specific price and quantity criteria. \n
+note over fishMonger.js: The chefConstraints filters a list of available fish based on a chef's budget and updates their pricing and quantities for the final menu. \n
+
+fishMonger.js->restaurant.js:mongerInventory, chefConstraints is pushed to restaraunt.js
+note over restaurant.js: Array purchaseFish collection of fish the restaurants purchased
+
+note over restaurant.js: fishMenu function generates a formatted HTML string to display a daily seafood menu based on a provided budget.
+main.js<-restaurant.js:fishMenu is imported to main.js
+bottomparticipants
+note over main.js:Sets a Budget: Defines a constant dailyPriceLimit of 3.99.\n\nGenerates the Menu: Passes that budget into the fishMenu function, which triggers the entire chain of logic (filtering the boat inventory, processing the monger's purchases, and applying the chef's constraints).\n\nDisplays Results: Outputs the final generated HTML string to the console.
+note over main.js:console.log (menu)
+
